@@ -18,7 +18,7 @@ body {
 
 @layer components {
   .input {
-    @apply bg-[#F5F5F5] placeholder:text-[#737373] outline-[#A259D4];
+    @apply bg-[#F5F5F5] placeholder:text-[#737373];
     
   }
   .dark .input {

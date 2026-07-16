@@ -18,7 +18,7 @@ const AuthInput = forwardRef<HTMLInputElement, AuthInputProps>(
         <input
           ref={ref}
           {...props}
-          className="rounded-[48px] input py-3 pr-4"
+          className={`rounded-[48px] input py-3 pr-4 ${ error ? "ring-1 ring-red-500 focus:ring-red-500 outline-none" : "outline-[#A259D4]"}`}
         />
 
         {error && (
