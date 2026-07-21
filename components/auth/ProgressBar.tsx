@@ -16,22 +16,25 @@ function ProgressBar({steps}: ProgressBarProps) {
     (step) => step.path === pathname
   );
   
-  
-  
-   return (
-    <div className="flex flex-row-reverse justify-center items-center gap-2">
-        {
-            steps.map((_, index)=>{
-                const active = index === currentStep;
 
-                return (
-                    <div key={index} className={`rounded-full cursor-pointer mb-6 transition-all duration-300
-                    ${active ? "w-19 h-2 bg-[#8B2FC9]" : "w-6 h-2 bg-white/80"}`}
-                    />
-                )
-            })
-        }
-    </div>
+   return (
+    <>
+        <p className="mb-3 text-center text-sm font-medium md:hidden">
+            مرحله {currentStep + 1} از {steps.length}
+        </p>
+        <div className="flex flex-row-reverse justify-center items-center gap-2">
+            {steps.map((_, index)=>{
+                    const active = index === currentStep;
+
+                    return (
+                        <div key={index} className={`rounded-full cursor-pointer mb-6 transition-all duration-300
+                        ${active ? "w-19 h-2 bg-[#8B2FC9]" : "w-6 h-2 bg-[#737373] dark:bg-white"}`}
+                        />
+                    )
+                })
+            }
+        </div>
+    </>
   )
 }
 

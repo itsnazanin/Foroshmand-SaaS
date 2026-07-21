@@ -1,8 +1,11 @@
-import React from 'react'
+
 
 function BackgroundGlow() {
   return (
-    <div className="w-90 h-90 pointer-events-none rounded-full bg-[#531C79] blur-[360px] absolute right-200 -top-40"/>
+    <div
+  className="md:block hidden absolute -top-60 mr-75 w-150 h-150 rounded-full pointer-events-none
+  bg-[radial-gradient(circle,rgba(83,28,121,1)_0%,rgba(83,28,121,1)_0%,rgba(83,28,121,0.5)_0%,transparent_70%)]"
+/>
   )
 }
 
