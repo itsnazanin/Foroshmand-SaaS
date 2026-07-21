@@ -31,6 +31,10 @@ export const ForgetPasswordSteps = [
         label:"forgetPassword"
     },
     {
+        path:"/forget-password/verify",
+        label:"verifyPassword"
+    },
+    {
         path:"/forget-password/set-password",
         label:"setPassword"
     }

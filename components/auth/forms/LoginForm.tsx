@@ -5,6 +5,8 @@ import GoogleButton from "../GoogleButton"
 import AuthButton from "../ui/AuthButton"
 import AuthInput from "../ui/AuthInput"
 import { useForm, SubmitHandler } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { loginSchema } from "@/schemas/login.schema"
 
   type LoginFormData = {
     phone: string;
@@ -13,10 +15,18 @@ import { useForm, SubmitHandler } from "react-hook-form"
 
 function LoginForm() {
 
-const { register, handleSubmit} = useForm<LoginFormData>()
-const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
+const { register, handleSubmit, formState:{errors}} = useForm<LoginFormData>({
+  resolver: zodResolver(loginSchema),
+  defaultValues: {
+    phone: "",
+    password: ""
+  }
+})
+const onSubmit: SubmitHandler<LoginFormData> = async (data:LoginFormData) => {
   console.log(data)
 }
+
+
 
   return (
     <div className='flex flex-col w-full items-start'>
@@ -27,16 +37,17 @@ const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
         <AuthInput 
         label="شماره موبایل" 
         placeholder="شماره موبایل خود را وارد کنید"
-        {...register("phone", {
-          required: "شماره موبایل الزامی است"
-        })}/>
+        error={errors.phone?.message}
+        {...register("phone")}
+        />
+
         <AuthInput 
         label="رمزعبور" 
         placeholder="رمزعبور خود را وارد کنید"
-        {...register("password", {
-          required: "رمزعبور الزامی است"
-        })}/>
-        <Link href="/forget-password" className="text-[#FF6C98] text-[14px]">فراموشی رمز عبور</Link>
+        error={errors.password?.message}
+        {...register("password")}
+        />
+        <Link href="/forget-password" className="text-[#FF6C98] text-[14px] w-fit">فراموشی رمز عبور</Link>
         <AuthButton title="ورود"/>
       </form>
       
