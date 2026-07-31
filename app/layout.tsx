@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import localFont from "next/font/local"
+import { cn } from "@/lib/utils";
+
 
 const peyda = localFont({
   src:[
@@ -48,7 +50,7 @@ export default function RootLayout({
     <html
       lang="fa"
       dir="rtl"
-      className={peyda.variable}
+      className={cn(peyda.variable)}
       suppressHydrationWarning
     >
       <body>
