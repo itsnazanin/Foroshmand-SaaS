@@ -8,18 +8,10 @@ export default function SalesChart(){
 
       <div className="flex justify-between items-center mb-6">
 
-        <h2 className="
-          text-white
-          lg:text-[20px]
-          laptop:text-[18px]
-          font-semibold
-        ">
+        <h2 className="text-white lg:text-[20px] laptop:text-[18px] font-semibold">
           روند فروش
         </h2>
-
-
       </div>
-
 
       <SalesChartGraph />
 

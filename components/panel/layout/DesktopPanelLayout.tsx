@@ -11,14 +11,15 @@ type DesktopLayoutProps = {
 function DesktopLayout({ children }: DesktopLayoutProps) {
 
   return (
-    <div className="flex h-screen overflow-x-hidden bg-[#0E0514] p-6 gap-6">
+    <div className="flex h-screen overflow-x-hidden bg-[#0E0514] p-4 gap-6">
       {/* <GlowPanel /> */}
+      
       <Sidebar />
 
       <main className="flex flex-col w-full">
         <DesktopPanelHeader />
 
-        <div className="h-[2800px] overflow-y-auto custom-scrollbar pt-6">
+        <div className="h-[2800px] overflow-y-auto custom-scrollbar pt-5">
           {children}
         </div>
       </main>

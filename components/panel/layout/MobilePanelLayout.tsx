@@ -15,7 +15,7 @@ export default function MobilePanelLayout({
     <div className="flex h-screen items-center flex-col bg-[#0E0514]">
       <MobilePanelHeader />
 
-      <main className="flex-1 items-center overflow-y-auto h-fit px-4 pl-2 pt-4 pb-6">
+      <main className="flex-1 w-full items-center overflow-y-auto h-fit px-4 pt-4 pb-6">
         {children}
       </main>
 

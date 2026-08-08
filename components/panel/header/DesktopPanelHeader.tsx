@@ -1,34 +1,43 @@
 import Image from "next/image"
 import womanPic from '@/public/image/woman.png'
 import { Bell, CalendarDays, ChevronDown } from "lucide-react"
+import randomLogo from "@/public/image/randomlogo.webp"
 
 function DesktopPanelHeader() {
   return (
     <>
-    <div className="w-full rounded-3xl py-4 px-6 flex justify-between items-center border border-[#531C79] bg-[#2A0E3C]">
+    <div className="w-full rounded-3xl py-1 px-6 flex justify-between items-center border border-[#531C79] bg-[#2A0E3C]">
       
         {/* Profile part */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-6">
           {/* profile */}
-          <span className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
 
-           <span className="rounded-full relative w-10 h-10">
+           <div className="rounded-full relative w-10 h-10">
             <Image fill className="object-cover rounded-full" src={womanPic} alt="this is user picture"/>
-           </span>
+           </div>
 
-           <span className="flex flex-col w-fit">
+           <div className="flex flex-col w-fit">
             <p>سیما کریمی</p>
             <p className="text-[12px] text-[#D1ACE9]">ادمین فروش</p>
-           </span>
+           </div>
 
-           <ChevronDown size={20} className="cursor-pointer" />
-         </span>
+         </div>
 
          {/* onlineshop name */}
-          <span className="flex pr-6 cursor-pointer">
-            <p>shopino</p>
+          <div className="flex items-center gap-2 cursor-pointer px-3 py-2.5 my-2 rounded-[12px] duration-300 hover:bg-[#a359d441]">
+            <div className="flex gap-3">
+                <div className="relative w-10 h-10 rounded-full bg-white">
+                  <Image fill className="object-cover rounded-full" src={randomLogo} alt="this is a logo for business"/>
+                </div>
+                <div className="flex flex-col">
+                  <p>shopino</p>
+                  <p className="text-[12px] text-[#D1ACE9]">شاپینو بهترین انتخاب برای فروشگاه اینترنتی</p>
+                </div>
+            </div>
+            
             <ChevronDown size={20} className="pr-1" />
-          </span>
+          </div>
 
         </div>
          

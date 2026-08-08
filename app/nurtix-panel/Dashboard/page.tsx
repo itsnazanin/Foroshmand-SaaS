@@ -8,7 +8,7 @@ import DashboardOrders from '@/components/panel/dashboard/orders/DashboardOrders
 
 function page() {
   return (
-    <div className='w-[98%] h-full'>
+    <div className='w-[98%] h-full mr-0.5'>
       <DashboardBanner />
       <DashboardCards />
       <DashboardCharts />

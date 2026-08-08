@@ -122,7 +122,7 @@ export default function OrderStatusChart({
         </div>
 
         {/* لجند */}
-        <div className="flex flex-row-reverse laptop:pt-4 laptop:w-full laptop:justify-center laptop:flex-row-reverse lg:flex-col gap-3 sm:gap-4">
+        <div className="flex flex-row-reverse laptop:pt-4 laptop:w-full laptop:justify-center laptop:flex-row-reverse gap-3 sm:gap-4">
           {data.map((item, index) => (
             <div
               key={index}
