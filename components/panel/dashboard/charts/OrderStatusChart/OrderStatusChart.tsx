@@ -10,7 +10,7 @@ interface OrderStatusChartProps {
 }
 
 const defaultData: ChartData[] = [
-  { label: 'ثبت شده', value: 50, color: '#00c853' },
+  { label: 'پرداخت شده', value: 50, color: '#00c853' },
   { label: 'در انتظار پرداخت', value: 30, color: '#ffc107' },
   { label: 'لغو شده', value: 20, color: '#ff5252' },
 ];

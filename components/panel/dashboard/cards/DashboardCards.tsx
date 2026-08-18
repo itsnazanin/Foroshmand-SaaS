@@ -16,9 +16,9 @@ function DashboardCards() {
               ${card.isFeatured && "bg-linear-to-r from-[#8B2FC9] to-[#FF477E] border-none"}`}>
                 
                 <Link href={card.href} className='flex w-full justify-between'>
-                    <div className='flex gap-3 laptop:gap-2.5 items-center'>
+                    <div className='flex gap-3 laptop:gap-4 lg:pr-2 items-center'>
                     <span
-                    className={`p-2 h-fit rounded-[12px] bg-[#531C79] ${card.isFeatured && "bg-[#FF6C98]"}`}>
+                    className={`p-3 h-fit rounded-[12px] bg-[#531C79] ${card.isFeatured && "bg-[#FF6C98]"}`}>
                     <Icon size={24} />
                     </span>
                     <div className='flex flex-col gap-1'>

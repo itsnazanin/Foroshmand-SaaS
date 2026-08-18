@@ -34,7 +34,7 @@ function Sidebar() {
               src={nurtix}
               alt="Nurtix Logo"
             />
-            <h1 className="pr-2 font-semibold laptop:text-[14px]">نورتیکس</h1>
+            <h1 className="pr-2 font-semibold laptop:text-[14px]">فروشمند</h1>
           </span>
         )}
 

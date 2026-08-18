@@ -1,6 +1,6 @@
 
 import DashboardBanner from '@/components/panel/dashboard/DashboardBanner'
-import MobileOrdersSection from '@/components/panel/dashboard/MobileOrders/MobileOrdersSection'
+import MobileOrdersSection from '@/components/panel/dashboard/OrderCards/MobileOrdersCards'
 import DashboardCards from '@/components/panel/dashboard/cards/DashboardCards'
 import DashboardCharts from '@/components/panel/dashboard/charts/DashboardCharts'
 import DashboardOrders from '@/components/panel/dashboard/orders/DashboardOrders'

@@ -26,7 +26,7 @@ function ConversationSection({
     useState<TabId>("all")
 
   return (
-    <div className="w-full md:w-[20.83%] h-full flex flex-col">
+    <div className="w-full md:w-[24.83%] p-4 rounded-[16px] bg-black h-full flex flex-col">
 
       <SearchCustomer />
 
